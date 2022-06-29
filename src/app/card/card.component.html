@@ -1,0 +1,32 @@
+<div class="section">
+  <div class="container" *ngFor=" let item of productList">
+    <div class="card-text">Код товару: {{item.code}}</div>
+    <div class="card-images">
+      <img [src]="item.img" alt="video card">
+    </div>
+    <div class="card-sale">
+      <div class="sale">{{item.sale}}</div>
+      <div class="sale">хіт</div>
+    </div>
+    <div class="card-title">
+      {{item.title}}
+    </div>
+    <div class="card-rating">
+      <div class="rating">
+        <ngb-rating [max]="5" [readonly]="false" class="rating">
+        </ngb-rating>
+      </div>
+      <div class="rating-text">{{item.rate}}</div>
+    </div>
+    <div class="card-price">
+      <div class="price-text">Ціна:</div>
+      <div class="price-new">{{item.price}}<span>{{item.cacheBack}}</span></div>
+      <div class="price-old">{{item.priceOld}}</div>
+    </div>
+    <div class="card-button-container">
+      <div class="button"><button>Купити</button></div>
+      <div class="button-like"><a href="#"><img src="assets/icon/heart.png" alt=""></a></div>
+      <div class="button-comparison"><a href="#"><img src="assets/icon/weight-scale.png" alt=""></a></div>
+    </div>
+  </div>
+</div>
